@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalproject.HomeController">
+   <children>
+      <Line endX="937.0001220703125" layoutX="343.0" layoutY="125.0" startX="-343.0" strokeWidth="3.0" />
+      <TextField fx:id="userNameInput" layoutX="1039.0" layoutY="5.0" prefHeight="31.0" prefWidth="239.0" promptText="username">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button layoutX="1196.0" layoutY="83.0" mnemonicParsing="false" onAction="#tryLogin" prefHeight="25.0" prefWidth="76.0" text="Login" />
+      <ImageView fitHeight="59.0" fitWidth="400.0" layoutX="32.0" layoutY="27.0" pickOnBounds="true">
+         <image>
+            <Image url="@LOGO.png" />
+         </image>
+      </ImageView>
+      <MenuButton layoutX="32.0" layoutY="159.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="80.0" text="Filter">
+        <items>
+            <MenuItem mnemonicParsing="false" onAction="#getSeminar" text="Seminar" />
+            <MenuItem mnemonicParsing="false" onAction="#getCampusEvent" text="Campus Event" />
+            <MenuItem mnemonicParsing="false" onAction="#getEventCommittee" text="Event Committee" />
+            <MenuItem mnemonicParsing="false" onAction="#getSocialHour" text="Social Hour" />
+            <MenuItem mnemonicParsing="false" onAction="#getStudentCommittee" text="Student Committee" />
+            <MenuItem mnemonicParsing="false" onAction="#getInfoSession" text="Info Session" />
+        </items>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </MenuButton>
+      <Text fx:id="validationText" fill="#f40000" layoutX="1038.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Button layoutX="32.0" layoutY="666.0" mnemonicParsing="false" onAction="#refresh" text="Refresh">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <ScrollPane layoutX="132.0" layoutY="159.0" prefHeight="534.0" prefWidth="1117.0">
+        <content>
+          <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0">
+               <children>
+                  <Text fx:id="content" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="1117.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <PasswordField fx:id="passwordInput" layoutX="1039.0" layoutY="42.0" prefHeight="31.0" prefWidth="239.0" promptText="password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>
